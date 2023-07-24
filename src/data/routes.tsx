@@ -22,13 +22,13 @@ const routes = [
     color: "text-violet-500",
   },
   {
-    name: "Music Genration",
+    name: "Music Generation",
     icon: MusicIcon,
     href: "/music",
     color: "text-emerald-500",
   },
   {
-    name: "Image generation",
+    name: "Image Generation",
     icon: ImageIcon,
     href: "/image",
     color: "text-pink-700",
@@ -41,7 +41,7 @@ const routes = [
   },
 
   {
-    name: "Code Genration",
+    name: "Code Generation",
     icon: CodeIcon,
     href: "/code",
     color: "text-green-700",
