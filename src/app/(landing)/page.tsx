@@ -1,7 +1,12 @@
+import LandingNavbar from "@/components/LandingNavbar";
+import LandingHero from "@/components/LandingHero";
+
 export default function Home() {
   return (
     <main>
-      <h1>Home</h1>
+      <LandingNavbar />
+      <LandingHero />
+      {/* <LandingContent /> */}
     </main>
   );
 }
