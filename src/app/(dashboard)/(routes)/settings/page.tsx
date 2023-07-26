@@ -1,7 +1,16 @@
-const SettingsPage = () => {
+import DashboardHeader from "@/components/DashboardHeader";
+import { Settings } from "lucide-react";
+
+const SettingsPage = async () => {
   return (
     <div>
-      <h1>Settings Page</h1>
+      <DashboardHeader
+        title="Settings"
+        description="Manage account settings."
+        icon={Settings}
+        iconColor="text-gray-700"
+        bgColor="bg-gray-700/10"
+      />
     </div>
   );
 };
