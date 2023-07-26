@@ -86,7 +86,7 @@ const ConversationPage = () => {
                       <Input
                         className="border-0 outline-none focus-visibe:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="Ask me anything?"
+                        placeholder="What would you like me to help you with?"
                         {...field}
                       />
                     </FormControl>

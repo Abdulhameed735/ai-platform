@@ -26,14 +26,16 @@ export async function POST(req: Request) {
         input: {
           prompt: prompt,
           temperature: 0.75,
+          system_prompt:
+            "You are a helpful, respectful and honest code generator. You must answer only in markdown code snippets. Use code comments for explanations.. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature. If a code does not make any sense, or is not factually coherent, explain why instead of generating something not correct. If you don't how to generate a code snippet, please don't share false or incorrect code.",
         },
       }
     );
-    console.log("[CONVERSATION_RESPONSE]", response);
+    console.log("[CODEGEN_RESPONSE]", response);
 
     return NextResponse.json(response);
   } catch (error) {
-    console.log("[CONVERSATION_ERROR]", error);
+    console.log("[CODEGEN_ERROR]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
