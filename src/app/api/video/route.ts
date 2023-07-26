@@ -1,6 +1,6 @@
+import Replicate from "replicate";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import Replicate from "replicate";
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
@@ -17,23 +17,21 @@ export async function POST(req: Request) {
     }
 
     if (!prompt) {
-      return new NextResponse("Messages are required", { status: 400 });
+      return new NextResponse("Prompt is required", { status: 400 });
     }
 
     const response = await replicate.run(
-      "a16z-infra/llama13b-v2-chat:d5da4236b006f967ceb7da037be9cfc3924b20d21fed88e1e94f19d56e2d3111",
+      "anotherjesse/zeroscope-v2-xl:71996d331e8ede8ef7bd76eba9fae076d31792e4ddf4ad057779b443d6aea62f",
       {
         input: {
-          prompt: prompt,
-          temperature: 0.75,
+          prompt,
         },
       }
     );
-    console.log("[CONVERSATION_RESPONSE]", response);
 
     return NextResponse.json(response);
   } catch (error) {
-    console.log("[CONVERSATION_ERROR]", error);
+    console.log("[VIDEO_ERROR]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
