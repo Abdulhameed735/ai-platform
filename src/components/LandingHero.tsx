@@ -18,6 +18,10 @@ const LandingHero = () => {
       </div>
       <div className="text-sm md:text-xl font-light text-zinc-400">
         Create content using AI 10x faster.
+        <p>
+          nothing works now, i have to pay so please bear with me, i just used
+          this to learn and i am happy with it :)
+        </p>
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
